@@ -8,7 +8,7 @@ async function start() {
   if (!fs.existsSync(path.resolve(tmpPath, 'anonymous_token'))) {
     fs.writeFileSync(path.resolve(tmpPath, 'anonymous_token'), '', 'utf-8')
   }
-  // 启动时更新anonymous_token
+  // 启动时更新anonymous token
   const generateConfig = require('./generateConfig')
   await generateConfig()
   require('./server').serveNcmApi({
